@@ -68,9 +68,9 @@ class Edit(QFrame):
         if self.fname == '' or self.lname == '' or self.age == '' or self.location == '' or self.email == '' or self.cmb.currentIndex()==-1:
             self.showDialog("Please enter details after selecting employee id")
         else:
-            query2 = 'update empdetails set empid=%s , first_name=%s, last_name=%s, age=%s, location=%s where email=%s'
+            query2 = 'update empdetails set first_name=%s, last_name=%s, age=%s, location=%s, email=%s where empid=%s'
             self.cursor.execute(query2,
-                                (self.eid, self.fname, self.lname, int(self.age), self.location, self.email,))
+                                (self.fname, self.lname, int(self.age), self.location, self.email, self.eid,))
             self.con.commit()
             self.showDialog("Data Updated!!")
             self.fnametxt.setText('')
