@@ -217,7 +217,7 @@
     <string>E-mail</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="emailtxt">
    <property name="geometry">
     <rect>
      <x>140</x>
